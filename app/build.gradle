@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+
+    defaultConfig {
+        applicationId "a2dv606.androidproject"
+        minSdkVersion 22
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':alobar-preference')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:24.2.1'
+    implementation 'com.android.support:support-v4:24.2.1'
+    implementation 'com.android.support:support-v13:24.2.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    implementation 'com.android.support:design:24.2.1'
+    implementation 'com.github.lzyzsd:circleprogress:1.1.0@aar'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+
+
